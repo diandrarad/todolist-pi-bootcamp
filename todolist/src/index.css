@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px; /* 1rem is usually equivalent to 16px */
+  font-family: 'Varela Round', sans-serif;
+  color: #475569;
+  background-color: #fefae0;
+}
+
+.app {
+  width: 70%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.5fr 5fr 1fr;
+}
+
+h1 {
+  font-family: 'Comfortaa', sans-serif;
+  text-align: center;
+  background-color: #e2e8f0;
+  color: #475569;
+  font-size: 32px; /* 2rem */
+  padding: 48px 0 16px; /* 3rem 0 1rem */
+}
+
+h4 {
+  color: #475569;
+}
+
+.add-form {
+  background-color: #cbd5e1;
+  padding: 8px 0; /* 0.5rem */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-form input {
+  margin-right: 16px; /* 1rem */
+  width: 300px;
+}
+
+.add-form button,
+button,
+input {
+  height: 40px;
+  background-color: #fefae0;
+  font-family: inherit;
+  border: none;
+  border-radius: 32px; /* 2rem */
+  padding: 8px 16px; /* 0.5rem 1rem */
+  font-size: 14px; /* 0.7rem */
+  cursor: pointer;
+}
+
+input {
+  height: 40px;
+}
+
+.filterButtons button {
+  background-color: #475569;
+  color: #fefae0;
+  font-weight: bold;
+  font-family: inherit;
+  border: none;
+  border-radius: 32px; /* 2rem */
+  padding: 8px 16px; /* 0.5rem 1rem */
+  font-size: 14px; /* 0.7rem */
+  cursor: pointer;
+}
+
+.list {
+  background-color: #e2e8f0;
+  color: #fefae0;
+  padding: 36.8px 0 0; /* 2.3rem */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 51.2px; /* 3.2rem */
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -16px; /* -1rem */
+}
+
+.list li {
+  color: #475569;
+  font-size: 16px; /* 1rem */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px; /* 1rem */
+  border: #475569 solid 1px;
+  padding: 10px;
+}
+
+.list input[type='checkbox'] {
+  height: 16px; /* 1rem */
+  width: 16px; /* 1rem */
+  accent-color: #475569;
+  margin-right: 20.8px; /* 1.3rem */
+}
+
+.list li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 32px; /* 2rem */
+  padding: 0;
+  width: 24px; /* 1.5rem */
+  height: 24px; /* 1.5rem */
+  background-color: transparent;
+  color: #475569;
+  margin-left: 16px; /* 1rem */
+}
+
+.filterButtons {
+  background-color: #e2e8f0;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filterButtons button {
+  color: #475569;
+  background-color: transparent;
+}
+
+.stats {
+  background-color: #cbd5e1;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 0; /* 1rem */
+  font-size: 16px; /* 1rem */
+  font-weight: bold;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  .app {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust as needed for smaller screens */
+    padding: 2rem 0 1rem;
+  }
+
+  .add-form div input {
+    width: 100%; /* Make input full width on smaller screens */
+  }
+
+  .list ul {
+    width: 100%;
+  }
+
+  .add-form input {
+    margin-left: 20px;
+  }
+
+  .add-form button {
+    margin-right: 20px;
+  }
+}
+
+/* Media query for screens between 600px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .app {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust as needed for medium screens */
+  }
+}
