@@ -63,7 +63,10 @@ export default function Item({ item }) {
         </span>
       )}
 
-      <button onClick={isEditing ? handleSave : () => setEditing(true)}>
+      <button onClick={isEditing ? handleSave : () => {
+        setEditedName(item.name)
+        setEditing(true)
+        }}>
         <Icon path={isEditing ? mdiContentSaveCheck : mdiPencil} />
       </button>
 

@@ -9,6 +9,7 @@ function Form() {
   const dispatch = useDispatch();
 
   const handleAddItem = () => {
+    if (!itemName) return
     dispatch(addItem({ id: Date.now(), name: itemName, checked: false }));
     setItemName('');
   };
